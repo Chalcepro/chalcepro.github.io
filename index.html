@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chalcedony Sokomba | 3D Artist, Animator & Designer</title>
+    <meta name="description" content="Portfolio of Chalcedony Sokomba (ThatNewGuy) — 3D Modeling, Hard Surface Design, Character Art, Motion Graphics & Animation.">
+    <meta name="theme-color" content="#141413">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="assets/Bootstrap/bootstrap/css/bootstrap.min.css">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+
+    <header class="container">
+        <div class="container-fluid">
+            <nav id="mainNav">
+                <!-- Logo: tries image first, falls back to text -->
+                <a href="index.html" class="nav-logo">
+                    <img src="assets/img/logo.png" alt="ALL IN ONE" class="nav-logo-img"
+                         onload="this.nextElementSibling.style.display='none'"
+                         onerror="this.style.display='none'">
+                    <h1 class="nav-logo-text">ALL IN ONE</h1>
+                </a>
+
+                <button class="nav-expand" id="navExpand" aria-label="Toggle navigation size">
+                    <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </button>
+
+                <ul>
+                    <li class="px-5 py-2 rounded-5 nav-cv">
+                        <a href="chalcedony_cv.html">
+                            <span class="nav-cv-full">View CV</span>
+                            <span class="nav-cv-mini">CV</span>
+                        </a>
+                    </li>
+                    <li class="music-slot">
+                        <button id="music" class="music-player-button" onclick="toggle()" aria-label="Toggle background music"></button>
+                        <audio id="bg-music" src="assets/audio/loop.MP3" loop></audio>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    
+        <!-- HERO SECTION -->
+        <section class="hero">
+            <div class="container-sm d-flex justify-content-center align-items-center" 
+                 style="height: 75vh; width: 100%; border-radius: 12px; background: url('assets/img/neon%20racecarHD.jpg') center/cover no-repeat;" 
+                 data-aos="fade-up">
+                <div class="d-flex flex-column text-center">
+                    <h1 class="display-1 text-white" style="letter-spacing: -0.02em; text-shadow: 0 4px 30px rgba(0,0,0,0.6);">THE ALL IN ONE</h1>
+                </div>
+            </div>
+
+            <!-- HERO SUBBAR — equal-width columns for true centering -->
+            <div class="hero-subbar">
+                <span class="hero-subbar__left">3D Artist · Hard Surface · Motion & Character Design</span>
+                <span class="hero-subbar__center">Chalcedony Sokomba</span>
+                <span class="hero-subbar__right">Abuja, Nigeria</span>
+            </div>
+        </section>
+    
+        <!-- CURATED DESIGNS — 3 FEATURED CARDS -->
+        <section class="my-5" id="featured-work">
+            <div class="container py-5 twhite">
+                <div class="work-section-header" data-aos="fade-up">
+                    <h1 class="display-2">CURATED DESIGNS</h1>
+                    <p class="work-sub">3D, animation and design — handpicked favorites.</p>
+                </div>
+                <div class="feat-grid" id="featGrid"></div>
+            </div>
+        </section>
+
+        <!-- CREATIVE VAULT — CYCLING MOSAIC COLLAGE -->
+        <section class="my-5 showcase-container" id="creative-vault">
+            <div class="container py-4 twhite">
+                <div class="collage-header" data-aos="fade-up">
+                    <h2 class="display-2">THE CREATIVE VAULT</h2>
+                    <p class="sans">An eclectic mosaic of experiments, character turnarounds, turntable animations, and shader studies. Every tile is interactive.</p>
+                </div>
+                <div class="mosaic-collage-frame" id="mosaicFrame">
+                    <div class="mosaic-collage" id="mosaicCollage"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- LIGHTBOX — for featured cards only -->
+        <div class="lb" id="lightbox" role="dialog" aria-modal="true" aria-label="Project details">
+            <div class="lb-box">
+                <span class="lb-close" role="button" aria-label="Close modal">&times;</span>
+                <div class="lb-media"></div>
+                <div class="lb-text sans"></div>
+            </div>
+        </div>
+
+        <!-- ABOUT — simplified, with social icons -->
+        <section id="about">
+            <div class="container">
+                <div class="row align-items-center g-5" data-aos="fade-up">
+                    <div class="col-lg-5">
+                        <img src="assets/img/chimp.jpg" alt="Bright orange background with green cactus illustration" class="about-img">
+                    </div>
+                    <div class="col-lg-7 twhite">
+                        <div class="about-text-block">
+                            <h2>Crafting Beyond The Screen</h2>
+                            <p>I'm Chalcedony Sokomba — a 3D artist and animator based in Abuja, building everything from hard-surface renders to character rigs and motion loops.</p>
+                            <div class="d-flex flex-wrap gap-3">
+                                <a href="./chalcedony_cv.html" download style="text-decoration:none;">
+                                    <button class="btn rounded-5 fs-5 px-5 border-2 border-white text-white sans">Download CV</button>
+                                </a>
+                                <a href="https://wa.me/2347013948480" target="_blank" rel="noopener" style="text-decoration:none;">
+                                    <button class="btn rounded-5 fs-5 px-5 btn-outline-light sans" style="border-width:2px;">Get In Touch</button>
+                                </a>
+                            </div>
+                            <div class="about-socials">
+                                <a href="https://wa.me/2347013948480" target="_blank" rel="noopener" aria-label="WhatsApp"><img src="assets/icons/icons8-whatsapp-480.png" alt="WhatsApp"></a>
+                                <a href="https://t.me/ThatNewGuy" target="_blank" rel="noopener" aria-label="Telegram"><img src="assets/icons/icons8-telegram-480.png" alt="Telegram"></a>
+                                <a href="https://discord.com/users/thatnewguy23" target="_blank" rel="noopener" aria-label="Discord"><img src="assets/icons/icons8-discord-480.png" alt="Discord"></a>
+                                <a href="https://facebook.com/chalcedony.sokomba" target="_blank" rel="noopener" aria-label="Facebook"><img src="assets/icons/icons8-facebook-480.png" alt="Facebook"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+    </header>
+
+    <!-- RIGHT SIDEBAR — detail view for collage items -->
+    <aside class="detail-sidebar" id="detailSidebar">
+        <button class="detail-sidebar__close" aria-label="Close sidebar">&times;</button>
+        <div class="detail-sidebar__media"></div>
+        <div class="detail-sidebar__info"></div>
+    </aside>
+
+    <!-- FULLSCREEN VIEWER — 45px padding, 3D parallax -->
+    <div class="fs-viewer" id="fsViewer">
+        <div class="fs-viewer__bg"></div>
+        <button class="fs-viewer__close" aria-label="Close viewer">&times;</button>
+        <div class="fs-viewer__media" id="fsMedia"></div>
+    </div>
+
+    <!-- COLLAGE PROGRESS BAR — fixed at viewport bottom -->
+    <div class="collage-progress" id="collageProgress">
+        <div class="collage-progress__bar" id="collageProgressBar"></div>
+    </div>
+
+    <!-- FOOTER — masked text, zero top gap -->
+    <footer class="container-fluid bg-white pb-5 mb-0 site-footer">
+        <div class="w-100 text-center" style="margin:0; padding:0; overflow:hidden;">
+            <h1 class="footer-mask-title" id="footerTitle">THE ALL IN ONE</h1>
+        </div>
+        <div class="footer-info">
+            <div class="row justify-content-center align-items-start g-4 px-md-5">
+                <div class="col-md-4">
+                    <div class="text-center" data-aos="fade-up" data-aos-delay="100">
+                        <h2>LOCATION</h2>
+                        <h6 class="sans w-75 m-auto mt-3" style="line-height: 1.6;">No. 3, B-close, 5th Avenue Mahfas Sunshine Estate, Phase 2, Kurudu Along Nyanya-Karshi Road Abuja</h6>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="text-center" data-aos="fade-up" data-aos-delay="200">
+                        <h2>CONTACT</h2>
+                        <h6 class="sans w-75 m-auto mt-3">+234 701 394 8480</h6>
+                        <h6 class="sans w-75 m-auto mt-2"><a href="mailto:chalceswork@gmail.com" style="color:inherit; text-decoration:none;">chalceswork@gmail.com</a></h6>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="text-center" data-aos="fade-up" data-aos-delay="300">
+                        <h2>FOLLOW ME</h2>
+                        <div class="pt-3">
+                            <div class="footer-socials-row d-flex flex-wrap justify-content-center align-items-center gap-3">
+                                <a href="https://facebook.com/chalcedony.sokomba" target="_blank" rel="noopener"><img src="assets/icons/hollow/icons8-facebook-250.png" style="width:32px;" alt="Facebook"></a>
+                                <a href="https://wa.me/2347013948480" target="_blank" rel="noopener"><img src="assets/icons/hollow/icons8-whatsapp-250.png" style="width:32px;" alt="WhatsApp"></a>
+                                <a href="https://instagram.com/chalcedonysokomba/" target="_blank" rel="noopener"><img src="assets/icons/hollow/icons8-instagram-250.png" style="width:32px;" alt="Instagram"></a>
+                                <a href="https://www.youtube.com/@ThatNewGuy2024" target="_blank" rel="noopener"><img src="assets/icons/hollow/icons8-youtube-250.png" style="width:32px;" alt="YouTube"></a>
+                                <a href="https://discord.com/users/thatnewguy23" target="_blank" rel="noopener"><img src="assets/icons/hollow/icons8-discord-250.png" style="width:32px;" alt="Discord"></a>
+                                <a href="https://t.me/ThatNewGuy" target="_blank" rel="noopener"><img src="assets/icons/hollow/icons8-telegram-250.png" style="width:32px;" alt="Telegram"></a>
+                                <a href="https://gamejolt.com/@ThatNewGuy23" target="_blank" rel="noopener"><img src="assets/icons/hollow/icons8-gamejolt-250.png" style="width:32px;" alt="GameJolt"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/Bootstrap/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script src="projects.js"></script>
+    <script src="app.js"></script>
+    <script>
+        function toggle() {
+            const audio = document.getElementById("bg-music");
+            const btn = document.getElementById("music");
+            const isPlaying = btn.classList.toggle("active");
+            if (isPlaying) { audio.play(); } else { audio.pause(); }
+        }
+    </script>
+</body>
+</html>

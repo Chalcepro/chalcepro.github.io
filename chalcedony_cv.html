@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sokomba Chalcedony Ariel - CV</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Fira+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Montserrat', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(120deg, #23243a 0%, #1f1f2e 100%);
+      color: #f5f5f5;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+    }
+    .cv-container {
+      display: flex;
+      max-width: 950px;
+      width: 100%;
+      background: rgba(44,44,60,0.98);
+      border-radius: 18px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+      overflow: hidden;
+      margin: 2rem 1rem;
+    }
+    .left-column {
+      width: 34%;
+      background: linear-gradient(160deg, #2c2c3c 60%, #23243a 100%);
+      padding: 2.2rem 1.5rem 2.2rem 2.2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      min-width: 220px;
+    }
+    .right-column {
+      width: 66%;
+      padding: 2.2rem 2.2rem 2.2rem 1.5rem;
+      background: transparent;
+    }
+    h1 {
+      font-size: 2.3rem;
+      font-weight: 700;
+      margin-bottom: 0.2rem;
+      letter-spacing: 1px;
+    }
+    h2 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #e63946;
+      border-bottom: 2px solid #e63946;
+      padding-bottom: 0.2rem;
+      margin-top: 2.2rem;
+      margin-bottom: 0.7rem;
+      letter-spacing: 0.5px;
+    }
+    .section-title {
+      color: #e63946;
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 0.7rem;
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+    li {
+      margin-bottom: 0.5rem;
+      font-size: 1rem;
+      font-family: 'Fira Mono', monospace;
+      color: #e0e0e0;
+    }
+    .contact, .skills, .soft-skills {
+      margin-top: 1.5rem;
+      width: 100%;
+    }
+    .contact p {
+      margin: 0.2rem 0 0.7rem 0;
+      font-size: 0.98rem;
+      color: #e0e0e0;
+    }
+    .contact strong {
+      color: #fff;
+      font-weight: 700;
+    }
+    .socials-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 0.5rem;
+      margin-bottom: 0.7rem;
+    }
+    .socials-row a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #23243a;
+      border-radius: 50%;
+      width: 36px;
+      height: 36px;
+      transition: background 0.2s, transform 0.2s;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+    .socials-row a:hover {
+      background: #e63946;
+      transform: scale(1.08);
+    }
+    .socials-row img {
+      width: 20px;
+      height: 20px;
+      filter: grayscale(0.2) brightness(1.2);
+    }
+    .skills ul, .soft-skills ul {
+      margin-top: 0.5rem;
+    }
+    .right-column p, .right-column ul {
+      font-size: 1.05rem;
+      color: #e0e0e0;
+      margin-bottom: 1.1rem;
+    }
+    .right-column ul {
+      margin-left: 1.2rem;
+    }
+    @media (max-width: 800px) {
+      .cv-container {
+        flex-direction: column;
+        max-width: 98vw;
+      }
+      .left-column, .right-column {
+        width: 100%;
+        min-width: unset;
+        padding: 1.2rem 1rem;
+      }
+      .left-column {
+        border-radius: 18px 18px 0 0;
+      }
+      .right-column {
+        border-radius: 0 0 18px 18px;
+      }
+    }
+    @media (max-width: 500px) {
+      .cv-container {
+        margin: 0.5rem 0.1rem;
+      }
+      h1 {
+        font-size: 1.3rem;
+      }
+      h2 {
+        font-size: 1rem;
+      }
+      .left-column, .right-column {
+        padding: 0.7rem 0.5rem;
+      }
+      .socials-row a {
+        width: 28px;
+        height: 28px;
+      }
+      .socials-row img {
+        width: 16px;
+        height: 16px;
+      }
+    }
+    body.light-mode {
+      background: linear-gradient(120deg, #f5f5f5 0%, #e9e9f2 100%) !important;
+      color: #23243a !important;
+    }
+    body.light-mode .cv-container {
+      background: rgba(255,255,255,0.98) !important;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.10);
+    }
+    body.light-mode .left-column {
+      background: linear-gradient(160deg, #f3f3f7 60%, #e9e9f2 100%) !important;
+    }
+    body.light-mode h1, body.light-mode h2, body.light-mode .section-title, body.light-mode .right-column p, body.light-mode .right-column ul, body.light-mode .contact strong {
+      color: #23243a !important;
+      border-color: #e63946 !important;
+    }
+    body.light-mode li {
+      color: #23243a !important;
+    }
+    body.light-mode .socials-row a {
+      background: #f3f3f7 !important;
+    }
+    body.light-mode .socials-row a:hover {
+      background: #e63946 !important;
+    }
+  </style>
+</head>
+<body>
+  <button id="theme-toggle" style="position:fixed;top:18px;right:18px;z-index:9999;padding:0.5rem 1rem;border-radius:8px;border:none;background:#e63946;color:#fff;font-weight:700;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,0.12);">Light Mode</button>
+  <div class="cv-container">
+    <div class="left-column">
+      <div class="contact">
+        <h2 class="section-title">Contact</h2>
+        <h5><strong>Phone:</strong> +2347013948480</h5>
+        <h5><strong>Email:</strong> chalceswork@gmail.com</h5>
+        <div class="socials-row">
+          <a href="https://facebook.com/chalcedony.sokomba" target="_blank" rel="noopener"><img src="assets/icons/hollow/icons8-facebook-250.png" alt="Facebook"></a>
+          <a href="https://wa.me/2347013948480" target="_blank" rel="noopener"><img src="assets/icons/hollow/icons8-whatsapp-250.png" alt="WhatsApp"></a>
+          <a href="https://instagram.com/chalcedonysokomba/" target="_blank" rel="noopener"><img src="assets/icons/hollow/icons8-instagram-250.png" alt="Instagram"></a>
+          <a href="https://www.youtube.com/@ThatNewGuy2024" target="_blank" rel="noopener"><img src="assets/icons/hollow/icons8-youtube-250.png" alt="YouTube"></a>
+          <a href="https://discord.com/users/thatnewguy23" target="_blank" rel="noopener"><img src="assets/icons/hollow/icons8-discord-250.png" alt="Discord"></a>
+          <a href="https://t.me/ThatNewGuy" target="_blank" rel="noopener"><img src="assets/icons/hollow/icons8-telegram-250.png" alt="Telegram"></a>
+          <a href="https://gamejolt.com/@ThatNewGuy23" target="_blank" rel="noopener"><img src="assets/icons/hollow/icons8-gamejolt-250.png" alt="GameJolt"></a>
+        </div>
+      </div>
+      <div class="skills">
+        <h2 class="section-title">Technical Skills</h2>
+        <ul>
+          <li>Graphic Design</li>
+          <li>Video Editing</li>
+          <li>Animation</li>
+          <li>3D Modelling</li>
+          <li>Frontend Web Development</li>
+          <li>Figma UI Design</li>
+          <li>Music Production (Basic)</li>
+          <li>Digital Art</li>
+        </ul>
+      </div>
+      <div class="soft-skills">
+        <h2 class="section-title">Soft Skills</h2>
+        <ul>
+          <li>Team Collaboration</li>
+          <li>Creative Thinking</li>
+          <li>Adaptability</li>
+          <li>Problem Solving</li>
+          <li>Self-Motivation</li>
+        </ul>
+      </div>
+    </div>
+    <div class="right-column">
+      <h1>Sokomba Chalcedony Ariel</h1>
+      <h2 class="section-title">Professional Summary</h2>
+      <p>Highly creative and versatile digital creator currently pursuing a diploma at Lincoln College of Science, Management and Technology, Abuja. Skilled in graphic design, animation, frontend development, and multimedia production. Passionate about visual storytelling and committed to continuous improvement through self-driven projects and experimentation. Known for adaptability, artistic innovation, and the ability to contribute effectively in collaborative environments.</p>
+      <h2 class="section-title">Education</h2>
+      <p><strong>Lincoln College of Science, Management and Technology, Abuja</strong><br>
+      Diploma in Progress — Semester 5<br>
+      2024 – 2025</p>
+      <h2 class="section-title">Freelance Experience</h2>
+      <p>Active as a self-taught freelancer with focus on personal and commissioned projects. Regularly publishes original animations, designs, and experimental multimedia on platforms like GameJolt and personal networks.</p>
+      <h2 class="section-title">Projects</h2>
+      <ul>
+        <li>Independent animation reels (2D/3D)</li>
+        <li>Custom illustrations and cover art</li>
+        <li>Interactive UI designs in Figma</li>
+        <li>Personal websites with HTML/CSS/JavaScript</li>
+      </ul>
+      <h2 class="section-title">Languages</h2>
+      <p>English</p>
+    </div>
+  </div>
+  <script>
+    const toggleBtn = document.getElementById('theme-toggle');
+    const body = document.body;
+    let light = false;
+    toggleBtn.onclick = function() {
+      light = !light;
+      if (light) {
+        body.classList.add('light-mode');
+        toggleBtn.textContent = 'Dark Mode';
+      } else {
+        body.classList.remove('light-mode');
+        toggleBtn.textContent = 'Light Mode';
+      }
+    };
+  </script>
+</body>
+</html>
