@@ -123,7 +123,7 @@
     slots[k] = next;
     const box = old.querySelector('.tile__media');
     box.classList.add('leaving');
-    setTimeout(() => old.replaceWith(tile(next)), 600);
+    setTimeout(() => { const t = tile(next); old.replaceWith(t); reveal(t); }, 600);
   }
 
   function tick(now) {
@@ -347,7 +347,23 @@
     } else if (e.key === 'Escape' && panelProject) closePanel();
   });
 
-  // ── page ──
+  // ── fade up ──
+  // Each piece fades in and rises into place once, when it first comes on screen.
+  // Things that arrive together (a row of tiles) follow each other by 90 ms.
+  const revealIO = new IntersectionObserver(entries => {
+    const arriving = entries.filter(e => e.isIntersecting).map(e => e.target)
+      .sort((a, b) => a.getBoundingClientRect().top - b.getBoundingClientRect().top || a.getBoundingClientRect().left - b.getBoundingClientRect().left);
+    arriving.forEach((el, i) => {
+      el.style.setProperty('--d', `${Math.min(i, 6) * 90}ms`);
+      el.classList.add('in');
+      revealIO.unobserve(el);
+    });
+  }, { rootMargin: '0px 0px -8% 0px' });
+  window.reveal = el => { el.classList.add('reveal'); revealIO.observe(el); };
+  document.querySelectorAll('.hero__img, .hero__title, .hero__bar, .section__head, .tile, .about__img, .about__text, .footer__title, .footer__cols > div, .vault__progress')
+    .forEach(reveal);
+
+
   let resizeT;
   addEventListener('resize', () => {
     clearTimeout(resizeT);

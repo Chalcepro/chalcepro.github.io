@@ -80,13 +80,6 @@ const PROJECTS = [
     "type": "video",
     "w": 1920,
     "h": 1920
-   },
-   {
-    "src": "assets/img/Gem metal.mp4",
-    "thumb": "assets/thumbs/Gem metal.jpg",
-    "type": "video",
-    "w": 1920,
-    "h": 1920
    }
   ]
  },
@@ -127,13 +120,6 @@ const PROJECTS = [
    {
     "src": "assets/img/rewrite.mp4",
     "thumb": "assets/thumbs/rewrite.jpg",
-    "type": "video",
-    "w": 1080,
-    "h": 1920
-   },
-   {
-    "src": "assets/img/567.mp4",
-    "thumb": "assets/thumbs/567.jpg",
     "type": "video",
     "w": 1080,
     "h": 1920
@@ -777,13 +763,6 @@ const PROJECTS = [
     "h": 1080
    },
    {
-    "src": "assets/img/number 22222222.mp4",
-    "thumb": "assets/thumbs/number 22222222.jpg",
-    "type": "video",
-    "w": 1920,
-    "h": 1080
-   },
-   {
     "src": "assets/img/keyboadddd.211jpg.jpg",
     "thumb": "assets/thumbs/keyboadddd.211jpg.jpg",
     "type": "image",
@@ -1010,13 +989,6 @@ const PROJECTS = [
     "type": "image",
     "w": 1256,
     "h": 2629
-   },
-   {
-    "src": "assets/img/redfff.jpg",
-    "thumb": "assets/thumbs/redfff.jpg",
-    "type": "image",
-    "w": 499,
-    "h": 1080
    }
   ]
  },
