@@ -6,47 +6,65 @@
   const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 
   // ── tiles ──
-  function media(item, { live = false } = {}) {
-    if (item.type === 'video' && live) {
-      return `<video src="${esc(item.src)}" poster="${esc(item.thumb)}" muted loop playsinline preload="none"></video>`;
-    }
-    return `<img src="${esc(item.thumb)}" alt="" loading="lazy" decoding="async">`;
-  }
-
-  function tile(p, { live = false, line = false } = {}) {
-    const el = document.createElement('button');
-    el.className = 'tile';
-    el.dataset.id = p.id;
-    const cover = p.items[0];
-    el.innerHTML = `
-      <div class="tile__media">${media(cover, { live })}
-        ${p.items.length > 1 ? `<span class="tile__count">${p.items.length}</span>` : ''}
-        ${cover.type === 'video' && !live ? '<span class="tile__play"></span>' : ''}
-      </div>
-      <div class="tile__meta"><span class="tile__title">${esc(p.title)}</span><span class="tile__cat">${esc(p.cat)}</span></div>
-      ${line ? `<p class="featured__line">${esc(p.line)}</p>` : ''}`;
-    el.setAttribute('aria-label', `${p.title}, ${p.cat}. Open details`);
-    el.addEventListener('click', () => openPanel(p));
-    return el;
-  }
-
-  // videos only play while on screen
+  // Videos play (muted) whenever they're on screen. Tiles with several pieces
+  // flick through them every 1.5 s, so people see there's more without clicking.
   const playIO = new IntersectionObserver(entries => {
     for (const e of entries) {
       if (e.isIntersecting) { e.target.preload = 'auto'; e.target.play().catch(() => {}); }
       else e.target.pause();
     }
-  }, { threshold: 0.25 });
-
-  // ── featured ──
-  const featured = $('#featured'), side = document.createElement('div');
-  side.className = 'featured__side';
-  FEATURED.forEach((id, i) => {
-    const t = tile(byId[id], { live: true, line: i === 0 });
-    (i === 0 ? featured : side).append(t);
-    t.querySelectorAll('video').forEach(v => playIO.observe(v));
+  }, { threshold: 0.2 });
+  const shown = new Set();
+  const showIO = new IntersectionObserver(entries => {
+    for (const e of entries) e.isIntersecting ? shown.add(e.target) : shown.delete(e.target);
   });
-  featured.append(side);
+
+  function media(item, { play = true } = {}) {
+    if (item.type === 'video' && play) {
+      return `<video src="${esc(item.src)}" poster="${esc(item.thumb)}" muted loop playsinline preload="none"></video>`;
+    }
+    return `<img src="${esc(item.thumb)}" alt="" loading="lazy" decoding="async">`;
+  }
+
+  function tile(p, { line = false, single = false } = {}) {
+    const el = document.createElement('button');
+    el.className = 'tile';
+    el.dataset.id = p.id;
+    const many = p.items.length > 1 && !single;
+    el.innerHTML = `
+      <div class="tile__media">${many ? p.items.map((it, i) =>
+          `<img src="${esc(it.thumb)}" alt="" loading="lazy" decoding="async" class="${i ? '' : 'on'}">`).join('')
+        : media(p.items[0])}
+        ${many ? `<span class="tile__count"><b>1</b> / ${p.items.length}</span>` : ''}
+      </div>
+      <div class="tile__meta"><span class="tile__title">${esc(p.title)}</span><span class="tile__cat">${esc(p.cat)}</span></div>
+      ${line ? `<p class="featured__line">${esc(p.line)}</p>` : ''}`;
+    el.setAttribute('aria-label', `${p.title}, ${p.cat}. Open details`);
+    el.addEventListener('click', () => openPanel(p));
+    el.querySelectorAll('video').forEach(v => playIO.observe(v));
+    if (many) { el._at = 0; showIO.observe(el); }
+    return el;
+  }
+
+  setInterval(() => {
+    for (const el of shown) {
+      if (!el.isConnected) { shown.delete(el); continue; }
+      const imgs = el.querySelectorAll('.tile__media img');
+      imgs[el._at].classList.remove('on');
+      el._at = (el._at + 1) % imgs.length;
+      imgs[el._at].classList.add('on');
+      el.querySelector('.tile__count b').textContent = el._at + 1;
+    }
+  }, 1500);
+
+  // ── featured: the lead shows its video if it has one, the others flick through ──
+  const featured = $('#featured');
+  FEATURED.forEach((id, i) => {
+    const p = byId[id];
+    const t = tile(p, { line: i === 0, single: p.items[0].type === 'video' });
+    t.classList.add(`featured__${i}`);
+    featured.append(t);
+  });
 
   // ── vault ──
   const vault = $('#vaultGrid'), bar = $('#vaultBar'), pauseBtn = $('#vaultPause');
@@ -82,8 +100,8 @@
     const old = vault.children[k];
     if (!old || old.classList.contains('is-active')) return;  // never swap what's open in the panel
     slots[k] = next;
-    const img = old.querySelector('img');
-    img.classList.add('leaving');
+    const box = old.querySelector('.tile__media');
+    box.classList.add('leaving');
     setTimeout(() => old.replaceWith(tile(next)), 600);
   }
 
@@ -134,6 +152,7 @@
     panelBody.innerHTML = `
       <h3>${esc(p.title)}</h3>
       <p class="panel__line">${esc(p.line)}</p>
+      ${p.story ? `<p class="panel__story">${esc(p.story)}</p>` : ''}
       <dl class="panel__facts">
         <dt>Type</dt><dd>${esc(p.cat)}</dd>
         <dt>Tools</dt><dd>${esc(p.tools)}</dd>
@@ -142,11 +161,12 @@
       </dl>
       <div class="panel__items">${p.items.map((it, i) => `
         <button class="tile" data-i="${i}" aria-label="View piece ${i + 1} fullscreen">
-          <div class="tile__media">${media(it)}${it.type === 'video' ? '<span class="tile__play"></span>' : ''}</div>
+          <div class="tile__media">${media(it)}</div>
         </button>`).join('')}
       </div>
       <p class="panel__hint">Click any piece to view it fullscreen.</p>`;
     panelBody.scrollTop = 0;
+    panelBody.querySelectorAll('video').forEach(v => playIO.observe(v));
     panelBody.querySelectorAll('[data-i]').forEach(b => b.addEventListener('click', () => openViewer(p.items, +b.dataset.i, p)));
     document.body.classList.add('panel-open');
     panel.setAttribute('aria-hidden', 'false');

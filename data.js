@@ -1,12 +1,13 @@
 // Made by tools/build_data.py -- edit the list there, not here.
-const FEATURED = ["emerald", "goggle", "metal"];
+const FEATURED = ["emerald", "ryder", "metal"];
 const PROJECTS = [
  {
   "id": "emerald",
   "title": "Emerald Ring",
   "cat": "3D Product",
   "line": "A cut emerald in a worn silver band, lit low across an oak table.",
-  "tools": "Blender, Cycles",
+  "story": "Made to be something mildly special for someone. Modelled and lit in Blender; the textures come from BlenderKit.",
+  "tools": "Blender, BlenderKit",
   "year": 2026,
   "items": [
    {
@@ -19,10 +20,11 @@ const PROJECTS = [
   ]
  },
  {
-  "id": "goggle",
-  "title": "Goggle Head",
+  "id": "ryder",
+  "title": "Ryder",
   "cat": "Character",
-  "line": "An original mascot: aviator goggles, a scarf that never sits still, and a lot of attitude for a face with no mouth.",
+  "line": "A post-apocalyptic scavenger, drawn years ago and finally built in 3D.",
+  "story": "Ryder started as a drawing from a long time ago. This is him in 3D: goggles, a scarf that never sits still, and a turnaround to show him off.",
   "tools": "Blender",
   "year": 2025,
   "items": [
@@ -60,7 +62,8 @@ const PROJECTS = [
   "id": "metal",
   "title": "Metal Sonic",
   "cat": "Character",
-  "line": "Fan model on a showroom plinth, with a chrome pass and a neon title card.",
+  "line": "Built entirely by me, in a cel-shaded look.",
+  "story": "Everything here, model, shading and the title card, was made from scratch in Blender. The goal was the full character in a clean cel-shaded style.",
   "tools": "Blender",
   "year": 2025,
   "items": [
@@ -81,12 +84,38 @@ const PROJECTS = [
   ]
  },
  {
-  "id": "sonic",
-  "title": "Sonic, Rewrite",
-  "cat": "Animation",
-  "line": "Low-poly Sonic in a Green Hill loop, then the Rewrite version of the same shot.",
+  "id": "speed",
+  "title": "Ryder's Ride",
+  "cat": "3D Scene",
+  "line": "The vehicle I designed for Ryder, flat out.",
+  "story": "The shape is inspired by the game Surge, where you drive sector to sector and it keeps getting faster. Everything is made in Blender with no outside textures. The ground blasting past is just noise textures stretched out, blue, yellow and red, layered on a bluish-black plane.",
   "tools": "Blender",
   "year": 2025,
+  "items": [
+   {
+    "src": "assets/img/neon racecarHD.jpg",
+    "thumb": "assets/thumbs/neon racecarHD.jpg",
+    "type": "image",
+    "w": 4096,
+    "h": 2304
+   },
+   {
+    "src": "assets/img/lopite.mp4",
+    "thumb": "assets/thumbs/lopite.jpg",
+    "type": "video",
+    "w": 1920,
+    "h": 1080
+   }
+  ]
+ },
+ {
+  "id": "rewrite",
+  "title": "Rewrite",
+  "cat": "Animation",
+  "line": "Janky, wild and still playful, like a 90s rubber-hose cartoon.",
+  "story": "Built 100% in Blender, after the Rewrite character from the game. What drew me in is how the animation feels: not balanced, a bit crazy, but smooth and relatable. He can swap into other characters; Lord X is the one other form I've made so far.",
+  "tools": "Blender",
+  "year": 2026,
   "items": [
    {
     "src": "assets/img/rewrite.mp4",
@@ -101,51 +130,14 @@ const PROJECTS = [
     "type": "video",
     "w": 1080,
     "h": 1920
-   }
-  ]
- },
- {
-  "id": "hammock",
-  "title": "Hammock",
-  "cat": "Animation",
-  "line": "Sonic doing nothing, beautifully.",
-  "tools": "Blender",
-  "year": 2025,
-  "items": [
+   },
    {
     "src": "assets/img/hemmock.mp4",
     "thumb": "assets/thumbs/hemmock.jpg",
     "type": "video",
     "w": 1920,
     "h": 1920
-   }
-  ]
- },
- {
-  "id": "sayy",
-  "title": "Pink",
-  "cat": "Character",
-  "line": "A stylised hedgehog, posed and lit like a toy.",
-  "tools": "Blender",
-  "year": 2025,
-  "items": [
-   {
-    "src": "assets/img/SaYY.mp4",
-    "thumb": "assets/thumbs/SaYY.jpg",
-    "type": "video",
-    "w": 1920,
-    "h": 1920
-   }
-  ]
- },
- {
-  "id": "exe",
-  "title": ".EXE",
-  "cat": "Illustration",
-  "line": "Lord X: a flat illustration and the animated title card built from it.",
-  "tools": "Blender, Photoshop",
-  "year": 2026,
-  "items": [
+   },
    {
     "src": "assets/img/Lord X.mp4",
     "thumb": "assets/thumbs/Lord X.jpg",
@@ -163,10 +155,29 @@ const PROJECTS = [
   ]
  },
  {
-  "id": "agent",
-  "title": "Red Agent",
+  "id": "malware",
+  "title": "Malware",
   "cat": "Character",
-  "line": "A one-colour stick agent, animated, then posed in stills.",
+  "line": "A female character made in response to Rewrite.",
+  "story": "A static model for now; the eyes don't move yet. The short clip is voiced by my girlfriend.",
+  "tools": "Blender",
+  "year": 2025,
+  "items": [
+   {
+    "src": "assets/img/SaYY.mp4",
+    "thumb": "assets/thumbs/SaYY.jpg",
+    "type": "video",
+    "w": 1920,
+    "h": 1920
+   }
+  ]
+ },
+ {
+  "id": "rey",
+  "title": "Rey",
+  "cat": "Character",
+  "line": "The red guy with glasses, made for a comic I haven't finished.",
+  "story": "Rey is an older character of mine; the E is the one with a flick on top, moving forward. A few months ago I started a comic with him. It isn't finished yet.",
   "tools": "Blender",
   "year": 2026,
   "items": [
@@ -201,11 +212,30 @@ const PROJECTS = [
   ]
  },
  {
+  "id": "night",
+  "title": "Night Run",
+  "cat": "Illustration",
+  "line": "My cel-shaded character on a silhouette city.",
+  "story": "Building a whole 3D city wasn't going to happen, so I did what Vector and Shadow Fight did: silhouettes for the background. That leaves the detail for the character and still sells the idea.",
+  "tools": "Blender",
+  "year": 2025,
+  "items": [
+   {
+    "src": "assets/img/Refined.jpg",
+    "thumb": "assets/thumbs/Refined.jpg",
+    "type": "image",
+    "w": 1080,
+    "h": 1920
+   }
+  ]
+ },
+ {
   "id": "noir",
   "title": "NOIR Technologies",
   "cat": "Branding",
   "line": "Identity, social posts and motion for a software studio.",
-  "tools": "Figma, Blender, After Effects",
+  "story": "Motion graphics, video editing and Blender work together.",
+  "tools": "Blender, Figma, video editing",
   "year": 2026,
   "items": [
    {
@@ -274,11 +304,12 @@ const PROJECTS = [
   ]
  },
  {
-  "id": "biopass",
-  "title": "Biopass",
+  "id": "breeze",
+  "title": "Breeze",
   "cat": "Motion",
-  "line": "Shop scene and edit for a product ad.",
-  "tools": "Blender, Premiere",
+  "line": "Animation and a light edit for Breeze.",
+  "story": "I animated the shop scene and did the small edit around it.",
+  "tools": "Blender, video editing",
   "year": 2026,
   "items": [
    {
@@ -291,27 +322,261 @@ const PROJECTS = [
   ]
  },
  {
-  "id": "controllers",
-  "title": "Controller Studies",
-  "cat": "3D Product",
-  "line": "Pads and a keyboard, re-lit until the plastic read right.",
-  "tools": "Blender, Cycles",
-  "year": 2026,
+  "id": "hardsurface",
+  "title": "Hardsurface",
+  "cat": "Web Design",
+  "line": "A place to build 3D models and show them online.",
+  "story": "Made for my lecturer: a space where people design their 3D models and anyone can view them online. We planned to build it together but went our separate ways, so only the front page exists. The wooden planet is a Blender model of mine; the space, the light beam and the glare were put together in Figma.",
+  "tools": "Figma, Blender",
+  "year": 2025,
   "items": [
    {
-    "src": "assets/img/keyboadddd.211jpg.jpg",
-    "thumb": "assets/thumbs/keyboadddd.211jpg.jpg",
+    "src": "assets/img/MacBook Pro 14_ (1).jpg",
+    "thumb": "assets/thumbs/MacBook Pro 14_ (1).jpg",
     "type": "image",
-    "w": 1920,
-    "h": 2429
+    "w": 1512,
+    "h": 982
    },
    {
-    "src": "assets/img/keyboadddd.111jpg.jpg",
-    "thumb": "assets/thumbs/keyboadddd.111jpg.jpg",
+    "src": "assets/img/Klean!!!.jpg",
+    "thumb": "assets/thumbs/Klean!!!.jpg",
     "type": "image",
     "w": 1920,
     "h": 1920
+   }
+  ]
+ },
+ {
+  "id": "folio",
+  "title": "Portfolio, Click",
+  "cat": "Web Design",
+  "line": "An attempt at a more dynamic portfolio.",
+  "story": "Designed in Figma, with the hollow black face made in Blender. No reference, straight from my head. It got too complex for me at the time, so it stopped here.",
+  "tools": "Figma, Blender",
+  "year": 2026,
+  "items": [
+   {
+    "src": "assets/img/MacBook Pro 14_ - 1 (3).png",
+    "thumb": "assets/thumbs/MacBook Pro 14_ - 1 (3).jpg",
+    "type": "image",
+    "w": 1512,
+    "h": 982
+   }
+  ]
+ },
+ {
+  "id": "chalce",
+  "title": "CHALCE",
+  "cat": "Web Design",
+  "line": "Another portfolio attempt, with the emerald up front.",
+  "story": "A second go at a portfolio. The glass was shot for it too: I was chasing caustics in Cycles, but my laptop couldn't get there, so I kept the shot as it was.",
+  "tools": "Figma, Blender",
+  "year": 2026,
+  "items": [
+   {
+    "src": "assets/img/MacBook Pro 14_ - 12 (1).png",
+    "thumb": "assets/thumbs/MacBook Pro 14_ - 12 (1).jpg",
+    "type": "image",
+    "w": 1512,
+    "h": 982
    },
+   {
+    "src": "assets/img/metallic.png",
+    "thumb": "assets/thumbs/metallic.jpg",
+    "type": "image",
+    "w": 3840,
+    "h": 2160
+   },
+   {
+    "src": "assets/img/i878u.png",
+    "thumb": "assets/thumbs/i878u.jpg",
+    "type": "image",
+    "w": 3840,
+    "h": 3840
+   }
+  ]
+ },
+ {
+  "id": "music",
+  "title": "Music Note",
+  "cat": "Branding",
+  "line": "A button from an older portfolio.",
+  "story": "That portfolio paired an image with each section. This was the graphic for the music section, and the note also became its play button. The background track was C418's Aria Math.",
+  "tools": "Blender",
+  "year": 2024,
+  "items": [
+   {
+    "src": "assets/img/note1.jpg",
+    "thumb": "assets/thumbs/note1.jpg",
+    "type": "image",
+    "w": 1920,
+    "h": 1920
+   }
+  ]
+ },
+ {
+  "id": "yale",
+  "title": "Yale School of Art",
+  "cat": "Web Design",
+  "line": "A loud, patterned redesign, for a 30-day design challenge.",
+  "story": "One of my entries for Gary Simon's 30-day design challenge on LinkedIn.",
+  "tools": "Figma",
+  "year": 2026,
+  "items": [
+   {
+    "src": "assets/img/MacBook Pro 14_ - 17.png",
+    "thumb": "assets/thumbs/MacBook Pro 14_ - 17.jpg",
+    "type": "image",
+    "w": 1512,
+    "h": 993
+   },
+   {
+    "src": "assets/img/Frame 348 (1).png",
+    "thumb": "assets/thumbs/Frame 348 (1).jpg",
+    "type": "image",
+    "w": 3600,
+    "h": 2700
+   }
+  ]
+ },
+ {
+  "id": "everyflaw",
+  "title": "Every Flaw, Seen.",
+  "cat": "Web Design",
+  "line": "Built from the challenge's own Figma brief, desktop and mobile.",
+  "story": "A 30-day design challenge (Gary Simon): we had to make something from the Figma project he shared.",
+  "tools": "Figma",
+  "year": 2026,
+  "items": [
+   {
+    "src": "assets/img/MacBook Pro 14_ - 14.png",
+    "thumb": "assets/thumbs/MacBook Pro 14_ - 14.jpg",
+    "type": "image",
+    "w": 1512,
+    "h": 982
+   },
+   {
+    "src": "assets/img/iPhone 16 & 17 Pro Max - 1.png",
+    "thumb": "assets/thumbs/iPhone 16 & 17 Pro Max - 1.jpg",
+    "type": "image",
+    "w": 440,
+    "h": 1016
+   }
+  ]
+ },
+ {
+  "id": "assurance",
+  "title": "Assurance",
+  "cat": "Web Design",
+  "line": "BH's famously plain website, redesigned.",
+  "story": "A 30-day design challenge entry: could I make one of the plainest sites online look good? Desktop and mobile.",
+  "tools": "Figma",
+  "year": 2026,
+  "items": [
+   {
+    "src": "assets/img/MacBook Pro 14_ - 10 (2).png",
+    "thumb": "assets/thumbs/MacBook Pro 14_ - 10 (2).jpg",
+    "type": "image",
+    "w": 1512,
+    "h": 982
+   },
+   {
+    "src": "assets/img/iPhone 16 - 4.png",
+    "thumb": "assets/thumbs/iPhone 16 - 4.jpg",
+    "type": "image",
+    "w": 393,
+    "h": 852
+   }
+  ]
+ },
+ {
+  "id": "itemtogo",
+  "title": "Item To Go",
+  "cat": "App Design",
+  "line": "An app redesign that keeps the brand's feel.",
+  "story": "I saw a redesign of this app that got the UX right but lost the brand: nothing popped. This is my attempt to keep their look and vibe.",
+  "tools": "Figma",
+  "year": 2026,
+  "items": [
+   {
+    "src": "assets/img/Home (1).jpg",
+    "thumb": "assets/thumbs/Home (1).jpg",
+    "type": "image",
+    "w": 824,
+    "h": 1834
+   }
+  ]
+ },
+ {
+  "id": "smart",
+  "title": "Smart Home Brochure",
+  "cat": "Print",
+  "line": "A brochure built in 3D.",
+  "story": "The brochure itself was made in Blender, with some real photos placed on planes, which gave more interesting results than a flat layout. I only finished this one page.",
+  "tools": "Blender",
+  "year": 2025,
+  "items": [
+   {
+    "src": "assets/img/PROPOSALD 2.jpg",
+    "thumb": "assets/thumbs/PROPOSALD 2.jpg",
+    "type": "image",
+    "w": 1250,
+    "h": 1920
+   }
+  ]
+ },
+ {
+  "id": "lughole",
+  "title": "Lughole",
+  "cat": "Motion",
+  "line": "The intro for an animated series with my friend.",
+  "story": "The plan: we talk about something interesting, I animate just our faces to our voices, plus a few random moments. Animation is slow, so that keeps it doable. So far only the intro exists.",
+  "tools": "Blender",
+  "year": 2026,
+  "items": [
+   {
+    "src": "assets/img/My Video-2.mp4",
+    "thumb": "assets/thumbs/My Video-2.jpg",
+    "type": "video",
+    "w": 1080,
+    "h": 1920
+   }
+  ]
+ },
+ {
+  "id": "teddy",
+  "title": "Teddy",
+  "cat": "3D Product",
+  "line": "A client job: a teddy copied from a reference, fur and all.",
+  "story": "Someone asked for a teddy matched exactly to a reference, with fur, animated across scenes: on a plane, on the beach. Back then I couldn't do all of it yet, so this render and the beach shot are what came out of it.",
+  "tools": "Blender",
+  "year": 2024,
+  "items": [
+   {
+    "src": "assets/img/VERSION 3.jpg",
+    "thumb": "assets/thumbs/VERSION 3.jpg",
+    "type": "image",
+    "w": 1565,
+    "h": 1920
+   },
+   {
+    "src": "assets/img/pic 1.jpg",
+    "thumb": "assets/thumbs/pic 1.jpg",
+    "type": "image",
+    "w": 1980,
+    "h": 1174
+   }
+  ]
+ },
+ {
+  "id": "controllers",
+  "title": "Controllers",
+  "cat": "3D Product",
+  "line": "A PlayStation pad from years ago, and the one on my desk.",
+  "story": "The white one was a PlayStation controller attempt from 3 or 4 years ago. The dark one is my current controller, close to the real thing, red and blue lights included.",
+  "tools": "Blender",
+  "year": 2026,
+  "items": [
    {
     "src": "assets/img/dez.png",
     "thumb": "assets/thumbs/dez.jpg",
@@ -341,6 +606,20 @@ const PROJECTS = [
     "h": 1080
    },
    {
+    "src": "assets/img/keyboadddd.211jpg.jpg",
+    "thumb": "assets/thumbs/keyboadddd.211jpg.jpg",
+    "type": "image",
+    "w": 1920,
+    "h": 2429
+   },
+   {
+    "src": "assets/img/keyboadddd.111jpg.jpg",
+    "thumb": "assets/thumbs/keyboadddd.111jpg.jpg",
+    "type": "image",
+    "w": 1920,
+    "h": 1920
+   },
+   {
     "src": "assets/img/keyboadddd.png",
     "thumb": "assets/thumbs/keyboadddd.jpg",
     "type": "image",
@@ -357,224 +636,99 @@ const PROJECTS = [
   ]
  },
  {
-  "id": "hardsurface",
-  "title": "Hardsurface",
-  "cat": "Web Design",
-  "line": "Landing page for a 3D asset community.",
-  "tools": "Figma, Blender",
-  "year": 2025,
-  "items": [
-   {
-    "src": "assets/img/MacBook Pro 14_ (1).jpg",
-    "thumb": "assets/thumbs/MacBook Pro 14_ (1).jpg",
-    "type": "image",
-    "w": 1512,
-    "h": 982
-   }
-  ]
- },
- {
-  "id": "chalce",
-  "title": "CHALCE",
-  "cat": "Web Design",
-  "line": "A luxury brand site where the product does the talking.",
-  "tools": "Figma, Blender",
-  "year": 2026,
-  "items": [
-   {
-    "src": "assets/img/MacBook Pro 14_ - 12 (1).png",
-    "thumb": "assets/thumbs/MacBook Pro 14_ - 12 (1).jpg",
-    "type": "image",
-    "w": 1512,
-    "h": 982
-   },
-   {
-    "src": "assets/img/metallic.png",
-    "thumb": "assets/thumbs/metallic.jpg",
-    "type": "image",
-    "w": 3840,
-    "h": 2160
-   }
-  ]
- },
- {
-  "id": "everyflaw",
-  "title": "Every Flaw, Seen.",
-  "cat": "Web Design",
-  "line": "Inspection software, desktop and mobile.",
-  "tools": "Figma",
-  "year": 2026,
-  "items": [
-   {
-    "src": "assets/img/MacBook Pro 14_ - 14.png",
-    "thumb": "assets/thumbs/MacBook Pro 14_ - 14.jpg",
-    "type": "image",
-    "w": 1512,
-    "h": 982
-   },
-   {
-    "src": "assets/img/iPhone 16 & 17 Pro Max - 1.png",
-    "thumb": "assets/thumbs/iPhone 16 & 17 Pro Max - 1.jpg",
-    "type": "image",
-    "w": 440,
-    "h": 1016
-   }
-  ]
- },
- {
-  "id": "assurance",
-  "title": "Assurance",
-  "cat": "Web Design",
-  "line": "A deliberately old-web investor page, desktop and mobile.",
-  "tools": "Figma",
-  "year": 2026,
-  "items": [
-   {
-    "src": "assets/img/MacBook Pro 14_ - 10 (2).png",
-    "thumb": "assets/thumbs/MacBook Pro 14_ - 10 (2).jpg",
-    "type": "image",
-    "w": 1512,
-    "h": 982
-   },
-   {
-    "src": "assets/img/iPhone 16 - 4.png",
-    "thumb": "assets/thumbs/iPhone 16 - 4.jpg",
-    "type": "image",
-    "w": 393,
-    "h": 852
-   }
-  ]
- },
- {
-  "id": "yale",
-  "title": "Yale School of Art",
-  "cat": "Web Design",
-  "line": "A loud, patterned redesign of the school's wiki.",
-  "tools": "Figma",
-  "year": 2026,
-  "items": [
-   {
-    "src": "assets/img/MacBook Pro 14_ - 17.png",
-    "thumb": "assets/thumbs/MacBook Pro 14_ - 17.jpg",
-    "type": "image",
-    "w": 1512,
-    "h": 993
-   },
-   {
-    "src": "assets/img/Frame 348 (1).png",
-    "thumb": "assets/thumbs/Frame 348 (1).jpg",
-    "type": "image",
-    "w": 3600,
-    "h": 2700
-   }
-  ]
- },
- {
-  "id": "folio",
-  "title": "Portfolio, Early",
-  "cat": "Web Design",
-  "line": "An earlier version of this site.",
-  "tools": "Figma",
-  "year": 2026,
-  "items": [
-   {
-    "src": "assets/img/MacBook Pro 14_ - 1 (3).png",
-    "thumb": "assets/thumbs/MacBook Pro 14_ - 1 (3).jpg",
-    "type": "image",
-    "w": 1512,
-    "h": 982
-   }
-  ]
- },
- {
-  "id": "food",
-  "title": "Easy Pickup",
-  "cat": "App Design",
-  "line": "Food ordering app, home screen.",
-  "tools": "Figma",
-  "year": 2026,
-  "items": [
-   {
-    "src": "assets/img/Home (1).jpg",
-    "thumb": "assets/thumbs/Home (1).jpg",
-    "type": "image",
-    "w": 824,
-    "h": 1834
-   }
-  ]
- },
- {
-  "id": "smart",
-  "title": "Smart Home Brochure",
-  "cat": "Print",
-  "line": "Tri-fold for a home automation company.",
-  "tools": "Photoshop",
-  "year": 2025,
-  "items": [
-   {
-    "src": "assets/img/PROPOSALD 2.jpg",
-    "thumb": "assets/thumbs/PROPOSALD 2.jpg",
-    "type": "image",
-    "w": 1250,
-    "h": 1920
-   }
-  ]
- },
- {
-  "id": "sunrise",
-  "title": "ThatNewGuy23",
-  "cat": "Branding",
-  "line": "Channel art: one sunrise, three crops.",
+  "id": "squid",
+  "title": "Squidward's House",
+  "cat": "3D Product",
+  "line": "Squidward's house, 100% Blender.",
+  "story": "",
   "tools": "Blender",
   "year": 2024,
   "items": [
    {
-    "src": "assets/img/phonewallp2.jpg",
-    "thumb": "assets/thumbs/phonewallp2.jpg",
+    "src": "assets/img/squid3.jpg",
+    "thumb": "assets/thumbs/squid3.jpg",
     "type": "image",
-    "w": 1256,
-    "h": 2629
-   },
-   {
-    "src": "assets/img/redfff.jpg",
-    "thumb": "assets/thumbs/redfff.jpg",
-    "type": "image",
-    "w": 499,
+    "w": 753,
     "h": 1080
-   },
-   {
-    "src": "assets/img/blending3.jpg",
-    "thumb": "assets/thumbs/blending3.jpg",
-    "type": "image",
-    "w": 1920,
-    "h": 809
    }
   ]
  },
  {
-  "id": "lughole",
-  "title": "Lughole",
-  "cat": "Motion",
-  "line": "Channel intro.",
-  "tools": "After Effects",
-  "year": 2026,
+  "id": "piano",
+  "title": "Concert Grand",
+  "cat": "3D Product",
+  "line": "A piano, made entirely in Blender.",
+  "story": "",
+  "tools": "Blender",
+  "year": 2025,
   "items": [
    {
-    "src": "assets/img/My Video-2.mp4",
-    "thumb": "assets/thumbs/My Video-2.jpg",
-    "type": "video",
-    "w": 1080,
+    "src": "assets/img/Composed.jpg",
+    "thumb": "assets/thumbs/Composed.jpg",
+    "type": "image",
+    "w": 2434,
+    "h": 1080
+   }
+  ]
+ },
+ {
+  "id": "bottles",
+  "title": "Bottles",
+  "cat": "3D Product",
+  "line": "A bottle my family actually had, modelled from scratch.",
+  "story": "Modelled from nothing in Blender. Only the pattern on the side comes from BlenderKit.",
+  "tools": "Blender, BlenderKit",
+  "year": 2024,
+  "items": [
+   {
+    "src": "assets/img/bottotol3.jpg",
+    "thumb": "assets/thumbs/bottotol3.jpg",
+    "type": "image",
+    "w": 1065,
+    "h": 1920
+   },
+   {
+    "src": "assets/img/bottotol2.jpg",
+    "thumb": "assets/thumbs/bottotol2.jpg",
+    "type": "image",
+    "w": 1065,
     "h": 1920
    }
   ]
  },
  {
-  "id": "materials",
-  "title": "Material Studies",
+  "id": "cups",
+  "title": "Cups",
+  "cat": "3D Product",
+  "line": "Old, simple, and the depth of field does a lot.",
+  "story": "",
+  "tools": "Blender",
+  "year": 2024,
+  "items": [
+   {
+    "src": "assets/img/cuos.jpg",
+    "thumb": "assets/thumbs/cuos.jpg",
+    "type": "image",
+    "w": 1920,
+    "h": 1920
+   },
+   {
+    "src": "assets/img/cup.jpg",
+    "thumb": "assets/thumbs/cup.jpg",
+    "type": "image",
+    "w": 1920,
+    "h": 1920
+   }
+  ]
+ },
+ {
+  "id": "rust",
+  "title": "Rusted Vessel",
   "cat": "Lookdev",
-  "line": "Copper, jade, wood and lacquer, one object at a time.",
-  "tools": "Blender, Cycles",
-  "year": 2025,
+  "line": "Gritty, rusted orange metal.",
+  "story": "Made following a tutorial.",
+  "tools": "Blender",
+  "year": 2024,
   "items": [
    {
     "src": "assets/img/PBallwall2.jpg",
@@ -582,7 +736,18 @@ const PROJECTS = [
     "type": "image",
     "w": 3840,
     "h": 3840
-   },
+   }
+  ]
+ },
+ {
+  "id": "materials",
+  "title": "Material Studies",
+  "cat": "Lookdev",
+  "line": "Jade, wood and lacquer.",
+  "story": "",
+  "tools": "Blender",
+  "year": 2025,
+  "items": [
    {
     "src": "assets/img/PEBBLE2.jpg",
     "thumb": "assets/thumbs/PEBBLE2.jpg",
@@ -598,13 +763,6 @@ const PROJECTS = [
     "h": 3840
    },
    {
-    "src": "assets/img/Klean!!!.jpg",
-    "thumb": "assets/thumbs/Klean!!!.jpg",
-    "type": "image",
-    "w": 1920,
-    "h": 1920
-   },
-   {
     "src": "assets/img/Cooool.jpg",
     "thumb": "assets/thumbs/Cooool.jpg",
     "type": "image",
@@ -615,9 +773,10 @@ const PROJECTS = [
  },
  {
   "id": "arches",
-  "title": "Quiet Architecture",
+  "title": "Arches",
   "cat": "3D Scene",
-  "line": "Arches, doorways and white rooms.",
+  "line": "Three arches on a mirror floor.",
+  "story": "The sky is a stock photo (Freepik, I think); the floor is a low-roughness reflective plane. A colour ramp on the background is what made it start looking like an anime.",
   "tools": "Blender",
   "year": 2025,
   "items": [
@@ -652,10 +811,43 @@ const PROJECTS = [
   ]
  },
  {
+  "id": "sunrise",
+  "title": "ThatNewGuy23",
+  "cat": "3D Scene",
+  "line": "A knot in a field with the sun behind it.",
+  "story": "I was learning volumetrics. It came out good, so I kept it.",
+  "tools": "Blender",
+  "year": 2024,
+  "items": [
+   {
+    "src": "assets/img/blending3.jpg",
+    "thumb": "assets/thumbs/blending3.jpg",
+    "type": "image",
+    "w": 1920,
+    "h": 809
+   },
+   {
+    "src": "assets/img/phonewallp2.jpg",
+    "thumb": "assets/thumbs/phonewallp2.jpg",
+    "type": "image",
+    "w": 1256,
+    "h": 2629
+   },
+   {
+    "src": "assets/img/redfff.jpg",
+    "thumb": "assets/thumbs/redfff.jpg",
+    "type": "image",
+    "w": 499,
+    "h": 1080
+   }
+  ]
+ },
+ {
   "id": "monolith",
   "title": "Monolith",
   "cat": "3D Scene",
-  "line": "A slab in a field, then a slab in the dark.",
+  "line": "A tower in grass under a brown-to-blue sky.",
+  "story": "Just design.",
   "tools": "Blender",
   "year": 2026,
   "items": [
@@ -676,167 +868,11 @@ const PROJECTS = [
   ]
  },
  {
-  "id": "speed",
-  "title": "Speed",
+  "id": "redcube",
+  "title": "Red Cube",
   "cat": "3D Scene",
-  "line": "Two vehicles, both late for something.",
-  "tools": "Blender",
-  "year": 2025,
-  "items": [
-   {
-    "src": "assets/img/neon racecarHD.jpg",
-    "thumb": "assets/thumbs/neon racecarHD.jpg",
-    "type": "image",
-    "w": 4096,
-    "h": 2304
-   },
-   {
-    "src": "assets/img/lopite.mp4",
-    "thumb": "assets/thumbs/lopite.jpg",
-    "type": "video",
-    "w": 1920,
-    "h": 1080
-   }
-  ]
- },
- {
-  "id": "teddy",
-  "title": "Teddy",
-  "cat": "3D Product",
-  "line": "Fur and a cold marble floor.",
-  "tools": "Blender, Cycles",
-  "year": 2024,
-  "items": [
-   {
-    "src": "assets/img/VERSION 3.jpg",
-    "thumb": "assets/thumbs/VERSION 3.jpg",
-    "type": "image",
-    "w": 1565,
-    "h": 1920
-   }
-  ]
- },
- {
-  "id": "piano",
-  "title": "Concert Grand",
-  "cat": "3D Product",
-  "line": "Keys at a low angle.",
-  "tools": "Blender",
-  "year": 2025,
-  "items": [
-   {
-    "src": "assets/img/Composed.jpg",
-    "thumb": "assets/thumbs/Composed.jpg",
-    "type": "image",
-    "w": 2434,
-    "h": 1080
-   }
-  ]
- },
- {
-  "id": "glass",
-  "title": "Glass on a Ledge",
-  "cat": "3D Product",
-  "line": "Pressed glass, warm light.",
-  "tools": "Blender, Cycles",
-  "year": 2026,
-  "items": [
-   {
-    "src": "assets/img/i878u.png",
-    "thumb": "assets/thumbs/i878u.jpg",
-    "type": "image",
-    "w": 3840,
-    "h": 3840
-   }
-  ]
- },
- {
-  "id": "beach",
-  "title": "Beach Ball",
-  "cat": "3D Scene",
-  "line": "Sand, wind lines, one ball.",
-  "tools": "Blender",
-  "year": 2024,
-  "items": [
-   {
-    "src": "assets/img/pic 1.jpg",
-    "thumb": "assets/thumbs/pic 1.jpg",
-    "type": "image",
-    "w": 1980,
-    "h": 1174
-   }
-  ]
- },
- {
-  "id": "cups",
-  "title": "Cups",
-  "cat": "3D Product",
-  "line": "Matte tumblers, then one cup drawn flat.",
-  "tools": "Blender",
-  "year": 2024,
-  "items": [
-   {
-    "src": "assets/img/cuos.jpg",
-    "thumb": "assets/thumbs/cuos.jpg",
-    "type": "image",
-    "w": 1920,
-    "h": 1920
-   },
-   {
-    "src": "assets/img/cup.jpg",
-    "thumb": "assets/thumbs/cup.jpg",
-    "type": "image",
-    "w": 1920,
-    "h": 1920
-   }
-  ]
- },
- {
-  "id": "bottles",
-  "title": "Bottles",
-  "cat": "3D Product",
-  "line": "One bottle, two colourways.",
-  "tools": "Blender",
-  "year": 2024,
-  "items": [
-   {
-    "src": "assets/img/bottotol3.jpg",
-    "thumb": "assets/thumbs/bottotol3.jpg",
-    "type": "image",
-    "w": 1065,
-    "h": 1920
-   },
-   {
-    "src": "assets/img/bottotol2.jpg",
-    "thumb": "assets/thumbs/bottotol2.jpg",
-    "type": "image",
-    "w": 1065,
-    "h": 1920
-   }
-  ]
- },
- {
-  "id": "squid",
-  "title": "Tiki House",
-  "cat": "3D Product",
-  "line": "A pencil pot that is also a house.",
-  "tools": "Blender",
-  "year": 2024,
-  "items": [
-   {
-    "src": "assets/img/squid3.jpg",
-    "thumb": "assets/thumbs/squid3.jpg",
-    "type": "image",
-    "w": 753,
-    "h": 1080
-   }
-  ]
- },
- {
-  "id": "tread",
-  "title": "Tread",
-  "cat": "3D Product",
-  "line": "Rubber and red bricks.",
+  "line": "A red cube with bulging spheres and a blue torus.",
+  "story": "Just design.",
   "tools": "Blender",
   "year": 2025,
   "items": [
@@ -850,20 +886,50 @@ const PROJECTS = [
   ]
  },
  {
+  "id": "cactus",
+  "title": "Cactus",
+  "cat": "Illustration",
+  "line": "My first try at a toon shader.",
+  "story": "Made in Blender, straight from my head with no reference.",
+  "tools": "Blender",
+  "year": 2024,
+  "items": [
+   {
+    "src": "assets/img/chimp.jpg",
+    "thumb": "assets/thumbs/chimp.jpg",
+    "type": "image",
+    "w": 1920,
+    "h": 1920
+   }
+  ]
+ },
+ {
+  "id": "gamejolt",
+  "title": "Game Jolt Friend",
+  "cat": "Character",
+  "line": "Someone's Game Jolt design, built in 3D as a gift.",
+  "story": "They liked it. Simple as that.",
+  "tools": "Blender",
+  "year": 2026,
+  "items": [
+   {
+    "src": "assets/img/0001-0080.mp4",
+    "thumb": "assets/thumbs/0001-0080.jpg",
+    "type": "video",
+    "w": 1920,
+    "h": 1920
+   }
+  ]
+ },
+ {
   "id": "marks",
   "title": "Marks",
   "cat": "Branding",
   "line": "Logos and app icons.",
-  "tools": "Illustrator, Blender",
+  "story": "",
+  "tools": "Blender",
   "year": 2025,
   "items": [
-   {
-    "src": "assets/img/note1.jpg",
-    "thumb": "assets/thumbs/note1.jpg",
-    "type": "image",
-    "w": 1920,
-    "h": 1920
-   },
    {
     "src": "assets/img/icon-light.jpg",
     "thumb": "assets/thumbs/icon-light.jpg",
@@ -881,37 +947,14 @@ const PROJECTS = [
   ]
  },
  {
-  "id": "night",
-  "title": "Night Run",
-  "cat": "Illustration",
-  "line": "Rooftops after dark.",
-  "tools": "Photoshop",
-  "year": 2025,
-  "items": [
-   {
-    "src": "assets/img/Refined.jpg",
-    "thumb": "assets/thumbs/Refined.jpg",
-    "type": "image",
-    "w": 1080,
-    "h": 1920
-   }
-  ]
- },
- {
   "id": "flat",
   "title": "Flat Studies",
   "cat": "Illustration",
   "line": "Small flat pieces.",
-  "tools": "Illustrator",
+  "story": "",
+  "tools": "Blender",
   "year": 2026,
   "items": [
-   {
-    "src": "assets/img/chimp.jpg",
-    "thumb": "assets/thumbs/chimp.jpg",
-    "type": "image",
-    "w": 1920,
-    "h": 1920
-   },
    {
     "src": "assets/img/iuihhyth.png",
     "thumb": "assets/thumbs/iuihhyth.jpg",
@@ -947,16 +990,10 @@ const PROJECTS = [
   "title": "Short Loops",
   "cat": "Animation",
   "line": "Little animations that loop.",
+  "story": "",
   "tools": "Blender",
-  "year": 2026,
+  "year": 2025,
   "items": [
-   {
-    "src": "assets/img/0001-0080.mp4",
-    "thumb": "assets/thumbs/0001-0080.jpg",
-    "type": "video",
-    "w": 1920,
-    "h": 1920
-   },
    {
     "src": "assets/img/0001-0200 (2).mp4",
     "thumb": "assets/thumbs/0001-0200 (2).jpg",
