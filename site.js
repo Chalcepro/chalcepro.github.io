@@ -7,7 +7,7 @@
 
   // ── tiles ──
   // Videos play (muted) whenever they're on screen. Tiles with several pieces
-  // flick through them every 1.5 s, so people see there's more without clicking.
+  // show each one in turn: a picture for 5 s, a video until it has played through.
   const playIO = new IntersectionObserver(entries => {
     for (const e of entries) {
       if (e.isIntersecting) { e.target.preload = 'auto'; e.target.play().catch(() => {}); }
@@ -32,8 +32,9 @@
     el.dataset.id = p.id;
     const many = p.items.length > 1 && !single;
     el.innerHTML = `
-      <div class="tile__media">${many ? p.items.map((it, i) =>
-          `<img src="${esc(it.thumb)}" alt="" loading="lazy" decoding="async" class="${i ? '' : 'on'}">`).join('')
+      <div class="tile__media">${many ? p.items.map((it, i) => (it.type === 'video'
+          ? `<video src="${esc(it.src)}" poster="${esc(it.thumb)}" muted playsinline preload="none" class="slide${i ? '' : ' on'}"></video>`
+          : `<img src="${esc(it.thumb)}" alt="" loading="lazy" decoding="async" class="slide${i ? '' : ' on'}">`)).join('')
         : media(p.items[0])}
         ${many ? `<span class="tile__count"><b>1</b> / ${p.items.length}</span>` : ''}
       </div>
@@ -41,21 +42,41 @@
       ${line ? `<p class="featured__line">${esc(p.line)}</p>` : ''}`;
     el.setAttribute('aria-label', `${p.title}, ${p.cat}. Open details`);
     el.addEventListener('click', () => openPanel(p));
-    el.querySelectorAll('video').forEach(v => playIO.observe(v));
-    if (many) { el._at = 0; showIO.observe(el); }
+    if (many) { el._at = 0; el._t = 0; showIO.observe(el); observeSlides(el); }
+    else el.querySelectorAll('video').forEach(v => playIO.observe(v));
     return el;
   }
 
+  const IMAGE_MS = 5000, MIN_MS = 4000, STEP = 250;
+  const showSlide = (el, i) => {
+    const slides = el.querySelectorAll('.slide');
+    const old = slides[el._at];
+    old.classList.remove('on');
+    if (old.tagName === 'VIDEO') { old.pause(); old.currentTime = 0; }
+    el._at = i; el._t = 0;
+    slides[i].classList.add('on');
+    if (slides[i].tagName === 'VIDEO') { slides[i].preload = 'auto'; slides[i].play().catch(() => {}); }
+    el.querySelector('.tile__count b').textContent = i + 1;
+  };
   setInterval(() => {
     for (const el of shown) {
       if (!el.isConnected) { shown.delete(el); continue; }
-      const imgs = el.querySelectorAll('.tile__media img');
-      imgs[el._at].classList.remove('on');
-      el._at = (el._at + 1) % imgs.length;
-      imgs[el._at].classList.add('on');
-      el.querySelector('.tile__count b').textContent = el._at + 1;
+      const slides = el.querySelectorAll('.slide'), cur = slides[el._at];
+      el._t += STEP;
+      let done;
+      if (cur.tagName === 'VIDEO') {
+        if (cur.paused && !cur.ended) { cur.preload = 'auto'; cur.play().catch(() => {}); }
+        if (cur.ended && el._t < MIN_MS) { cur.currentTime = 0; cur.play().catch(() => {}); }   // short clip: play it again
+        done = (cur.ended && el._t >= MIN_MS) || cur.error || el._t > 120000;
+      } else done = el._t >= IMAGE_MS;
+      if (done) showSlide(el, (el._at + 1) % slides.length);
     }
-  }, 1500);
+  }, STEP);
+  // off screen: stop the clip that's showing
+  const pauseOff = new IntersectionObserver(entries => {
+    for (const e of entries) if (!e.isIntersecting) e.target.querySelectorAll('video.slide').forEach(v => v.pause());
+  });
+  const observeSlides = el => pauseOff.observe(el);
 
   // ── featured: the lead shows its video if it has one, the others flick through ──
   const featured = $('#featured');
@@ -68,7 +89,7 @@
 
   // ── vault ──
   const vault = $('#vaultGrid'), bar = $('#vaultBar'), pauseBtn = $('#vaultPause');
-  const SWAP_MS = 3200;
+  const SWAP_MS = 9000;      // slow enough to take a piece in
   const pool = PROJECTS.filter(p => !FEATURED.includes(p.id));
   let slots = [], queue = [], elapsed = 0, last = performance.now();
   let userPaused = false, hovered = false, onScreen = false;

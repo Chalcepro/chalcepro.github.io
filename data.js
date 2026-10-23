@@ -24,9 +24,9 @@ const PROJECTS = [
   "title": "Ryder",
   "cat": "Character",
   "line": "A post-apocalyptic scavenger, drawn years ago and finally built in 3D.",
-  "story": "Ryder started as a drawing from a long time ago. This is him in 3D: goggles, a scarf that never sits still, and a turnaround to show him off.",
+  "story": "Ryder started as a pencil drawing from a long time ago (it's in here). This is him in 3D: goggles, a scarf that never sits still, and a turnaround to show him off.",
   "tools": "Blender",
-  "year": 2025,
+  "year": 2026,
   "items": [
    {
     "src": "assets/img/rotation.mp4",
@@ -34,6 +34,13 @@ const PROJECTS = [
     "type": "video",
     "w": 1920,
     "h": 1920
+   },
+   {
+    "src": "assets/img/ryder-drawing.jpg",
+    "thumb": "assets/thumbs/ryder-drawing.jpg",
+    "type": "image",
+    "w": 2000,
+    "h": 2666
    },
    {
     "src": "assets/img/BestCharacter Desgin44.jpg",
@@ -115,7 +122,7 @@ const PROJECTS = [
   "line": "Janky, wild and still playful, like a 90s rubber-hose cartoon.",
   "story": "Built 100% in Blender, after the Rewrite character from the game. What drew me in is how the animation feels: not balanced, a bit crazy, but smooth and relatable. He can swap into other characters; Lord X is the one other form I've made so far.",
   "tools": "Blender",
-  "year": 2026,
+  "year": 2025,
   "items": [
    {
     "src": "assets/img/rewrite.mp4",
@@ -137,11 +144,43 @@ const PROJECTS = [
     "type": "video",
     "w": 1920,
     "h": 1920
-   },
+   }
+  ]
+ },
+ {
+  "id": "lordx",
+  "title": "Lord X",
+  "cat": "Character",
+  "line": "Rewrite's other form, built and posed in Blender.",
+  "story": "Meant as one of the characters Rewrite can swap into. Here he is in T-pose, a close-up of the hand, a clean pose, the flat illustration and the animated title card.",
+  "tools": "Blender",
+  "year": 2026,
+  "items": [
    {
     "src": "assets/img/Lord X.mp4",
     "thumb": "assets/thumbs/Lord X.jpg",
     "type": "video",
+    "w": 3240,
+    "h": 5760
+   },
+   {
+    "src": "assets/img/lordx-tpose.jpg",
+    "thumb": "assets/thumbs/lordx-tpose.jpg",
+    "type": "image",
+    "w": 1080,
+    "h": 1920
+   },
+   {
+    "src": "assets/img/lordx-hand.jpg",
+    "thumb": "assets/thumbs/lordx-hand.jpg",
+    "type": "image",
+    "w": 1080,
+    "h": 1920
+   },
+   {
+    "src": "assets/img/lordx-pose.jpg",
+    "thumb": "assets/thumbs/lordx-pose.jpg",
+    "type": "image",
     "w": 3240,
     "h": 5760
    },
@@ -246,6 +285,13 @@ const PROJECTS = [
     "h": 1080
    },
    {
+    "src": "assets/img/noir-beautiful.png",
+    "thumb": "assets/thumbs/noir-beautiful.jpg",
+    "type": "image",
+    "w": 1240,
+    "h": 1268
+   },
+   {
     "src": "assets/img/1000582694.png",
     "thumb": "assets/thumbs/1000582694.jpg",
     "type": "image",
@@ -304,20 +350,41 @@ const PROJECTS = [
   ]
  },
  {
-  "id": "breeze",
-  "title": "Breeze",
+  "id": "briz",
+  "title": "Briz",
   "cat": "Motion",
-  "line": "Animation and a light edit for Breeze.",
-  "story": "I animated the shop scene and did the small edit around it.",
+  "line": "Pay like a breeze: the intro, the shop scene and the small pieces around them.",
+  "story": "I animated and did small edits: the intro, the shop scene for the Biopass ad, the ambassador loop and the forgot-your-phone shot.",
   "tools": "Blender, video editing",
   "year": 2026,
   "items": [
+   {
+    "src": "assets/img/briz-intro.mp4",
+    "thumb": "assets/thumbs/briz-intro.jpg",
+    "type": "video",
+    "w": 1280,
+    "h": 2276
+   },
    {
     "src": "assets/img/biopass-ad.mp4",
     "thumb": "assets/thumbs/biopass-ad.jpg",
     "type": "video",
     "w": 540,
     "h": 960
+   },
+   {
+    "src": "assets/img/briz-ambassador.mp4",
+    "thumb": "assets/thumbs/briz-ambassador.jpg",
+    "type": "video",
+    "w": 1280,
+    "h": 1820
+   },
+   {
+    "src": "assets/img/briz-forgot-phone.mp4",
+    "thumb": "assets/thumbs/briz-forgot-phone.jpg",
+    "type": "video",
+    "w": 1080,
+    "h": 1920
    }
   ]
  },
@@ -398,9 +465,9 @@ const PROJECTS = [
  },
  {
   "id": "music",
-  "title": "Music Note",
+  "title": "Play Button",
   "cat": "Branding",
-  "line": "A button from an older portfolio.",
+  "line": "The music button from an older portfolio.",
   "story": "That portfolio paired an image with each section. This was the graphic for the music section, and the note also became its play button. The background track was C418's Aria Math.",
   "tools": "Blender",
   "year": 2024,
@@ -486,6 +553,117 @@ const PROJECTS = [
     "type": "image",
     "w": 393,
     "h": 852
+   }
+  ]
+ },
+ {
+  "id": "voltrun",
+  "title": "Volt Run",
+  "cat": "Web Design",
+  "line": "Speed is biological: a running-gear site, walked through.",
+  "story": "One of my entries for Gary Simon's 30-day design challenge.",
+  "tools": "Figma",
+  "year": 2026,
+  "items": [
+   {
+    "src": "assets/img/volt-run.mp4",
+    "thumb": "assets/thumbs/volt-run.jpg",
+    "type": "video",
+    "w": 1280,
+    "h": 720
+   }
+  ]
+ },
+ {
+  "id": "pentacon",
+  "title": "PentaCon",
+  "cat": "Web Design",
+  "line": "A security-audit landing page, light and dark.",
+  "story": "One of my entries for Gary Simon's 30-day design challenge.",
+  "tools": "Figma",
+  "year": 2026,
+  "items": [
+   {
+    "src": "assets/img/pentacon-dark.png",
+    "thumb": "assets/thumbs/pentacon-dark.jpg",
+    "type": "image",
+    "w": 1785,
+    "h": 1180
+   },
+   {
+    "src": "assets/img/pentacon-light.png",
+    "thumb": "assets/thumbs/pentacon-light.jpg",
+    "type": "image",
+    "w": 1785,
+    "h": 1180
+   }
+  ]
+ },
+ {
+  "id": "roboledger",
+  "title": "Roboledger",
+  "cat": "Web Design",
+  "line": "A brutalist command portal.",
+  "story": "One of my entries for Gary Simon's 30-day design challenge.",
+  "tools": "Figma",
+  "year": 2026,
+  "items": [
+   {
+    "src": "assets/img/roboledger.png",
+    "thumb": "assets/thumbs/roboledger.jpg",
+    "type": "image",
+    "w": 1440,
+    "h": 2200
+   }
+  ]
+ },
+ {
+  "id": "robotics",
+  "title": "Autonomous Robotics",
+  "cat": "Web Design",
+  "line": "A robotics company site in motion.",
+  "story": "One of my entries for Gary Simon's 30-day design challenge.",
+  "tools": "Figma",
+  "year": 2026,
+  "items": [
+   {
+    "src": "assets/img/robotics-site.mp4",
+    "thumb": "assets/thumbs/robotics-site.jpg",
+    "type": "video",
+    "w": 1280,
+    "h": 612
+   }
+  ]
+ },
+ {
+  "id": "coolcode",
+  "title": "CoolCode",
+  "cat": "App Design",
+  "line": "A creator hub: channels, podcasts and friends, from wireframe to final.",
+  "story": "One of my entries for Gary Simon's 30-day design challenge.",
+  "tools": "Figma",
+  "year": 2026,
+  "items": [
+   {
+    "src": "assets/img/coolcode-channels.png",
+    "thumb": "assets/thumbs/coolcode-channels.jpg",
+    "type": "image",
+    "w": 1282,
+    "h": 832
+   },
+   {
+    "src": "assets/img/coolcode-friends.png",
+    "thumb": "assets/thumbs/coolcode-friends.jpg",
+    "type": "image",
+    "w": 1281,
+    "h": 832
+   },
+   {
+    "src": "assets/img/coolcode-wireframe.png",
+    "thumb": "assets/thumbs/coolcode-wireframe.jpg",
+    "type": "image",
+    "w": 1280,
+    "h": 1498
    }
   ]
  },

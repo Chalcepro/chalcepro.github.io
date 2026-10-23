@@ -131,7 +131,7 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
 .featured {
   display: grid;
   grid-template-columns: repeat(12, minmax(0, 1fr));
-  grid-template-rows: repeat(12, clamp(34px, 5.4vw, 78px));
+  grid-template-rows: repeat(12, clamp(26px, min(3.9vw, 5.2vh), 60px));
   column-gap: 16px;
 }
 .featured .tile { position: relative; transition: transform .5s var(--ease); }
@@ -163,8 +163,8 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
 }
 
 /* tiles with several pieces flick through them */
-.tile__media > img:not(:only-of-type) { position: absolute; inset: 0; opacity: 0; transition: opacity .5s, transform .8s var(--ease); }
-.tile__media > img.on { opacity: 1; }
+.tile__media > .slide { position: absolute; inset: 0; opacity: 0; transition: opacity .5s, transform .8s var(--ease); }
+.tile__media > .slide.on { opacity: 1; }
 .tile__count b { font-weight: 400; color: var(--accent); }
 
 /* ── vault: fixed slots, so swapping never changes the page height ── */
