@@ -1,5 +1,5 @@
 // Made by tools/build_data.py -- edit the list there, not here.
-const FEATURED = ["emerald", "ryder", "metal"];
+const FEATURED = ["ryder", "rey", "emerald"];
 const PROJECTS = [
  {
   "id": "emerald",
@@ -9,6 +9,7 @@ const PROJECTS = [
   "story": "Made to be something mildly special for someone. Modelled and lit in Blender; the textures come from BlenderKit.",
   "tools": "Blender, BlenderKit",
   "year": 2026,
+  "link": "",
   "items": [
    {
     "src": "assets/img/0979.png",
@@ -27,6 +28,7 @@ const PROJECTS = [
   "story": "Ryder started as a pencil drawing from a long time ago (it's in here). This is him in 3D: goggles, a scarf that never sits still, and a turnaround to show him off.",
   "tools": "Blender",
   "year": 2026,
+  "link": "",
   "items": [
    {
     "src": "assets/img/rotation.mp4",
@@ -73,6 +75,7 @@ const PROJECTS = [
   "story": "Everything here, model, shading and the title card, was made from scratch in Blender. The goal was the full character in a clean cel-shaded style.",
   "tools": "Blender",
   "year": 2025,
+  "link": "",
   "items": [
    {
     "src": "assets/img/part 3.mp4",
@@ -91,6 +94,7 @@ const PROJECTS = [
   "story": "The shape is inspired by the game Surge, where you drive sector to sector and it keeps getting faster. Everything is made in Blender with no outside textures. The ground blasting past is just noise textures stretched out, blue, yellow and red, layered on a bluish-black plane.",
   "tools": "Blender",
   "year": 2025,
+  "link": "",
   "items": [
    {
     "src": "assets/img/neon racecarHD.jpg",
@@ -116,6 +120,7 @@ const PROJECTS = [
   "story": "Built 100% in Blender, after the Rewrite character from the game. What drew me in is how the animation feels: not balanced, a bit crazy, but smooth and relatable. He can swap into other characters; Lord X is the one other form I've made so far.",
   "tools": "Blender",
   "year": 2025,
+  "link": "",
   "items": [
    {
     "src": "assets/img/rewrite.mp4",
@@ -141,6 +146,7 @@ const PROJECTS = [
   "story": "Meant as one of the characters Rewrite can swap into. Here he is in T-pose, a close-up of the hand, a clean pose, the flat illustration and the animated title card.",
   "tools": "Blender",
   "year": 2026,
+  "link": "",
   "items": [
    {
     "src": "assets/img/Lord X.mp4",
@@ -184,9 +190,10 @@ const PROJECTS = [
   "title": "Malware",
   "cat": "Character",
   "line": "A female character made in response to Rewrite.",
-  "story": "A static model for now; the eyes don't move yet. The short clip is voiced by my girlfriend.",
+  "story": "Rewrite is playful, so I wanted a partner for him, and a test of how far I could push myself. I put a little of my girlfriend into her design, and she voices the short clip. Both the character and her hammer are modelled; she is a static model for now and the eyes don't move yet.",
   "tools": "Blender",
   "year": 2025,
+  "link": "",
   "items": [
    {
     "src": "assets/img/SaYY.mp4",
@@ -205,6 +212,7 @@ const PROJECTS = [
   "story": "Rey is an older character of mine; the E is the one with a flick on top, moving forward. A few months ago I started a comic with him. It isn't finished yet.",
   "tools": "Blender",
   "year": 2026,
+  "link": "",
   "items": [
    {
     "src": "assets/img/0000-0200.mp4",
@@ -244,6 +252,7 @@ const PROJECTS = [
   "story": "Building a whole 3D city wasn't going to happen, so I did what Vector and Shadow Fight did: silhouettes for the background. That leaves the detail for the character and still sells the idea.",
   "tools": "Blender",
   "year": 2025,
+  "link": "",
   "items": [
    {
     "src": "assets/img/Refined.jpg",
@@ -259,9 +268,10 @@ const PROJECTS = [
   "title": "NOIR Technologies",
   "cat": "Branding",
   "line": "Identity, social posts and motion for a software studio.",
-  "story": "Motion graphics, video editing and Blender work together.",
+  "story": "Motion graphics, video editing and Blender work together. The flyer test follows an idea from Luca Maxim on TikTok: open with something personal, a feeling or a thought, and only bring the product in at the end. Mine keeps just the personal part.",
   "tools": "Blender, Figma, video editing",
   "year": 2026,
+  "link": "https://noirtech.digital",
   "items": [
    {
     "src": "assets/img/v4.mp4",
@@ -327,8 +337,8 @@ const PROJECTS = [
     "h": 1536
    },
    {
-    "src": "assets/img/ChatGPT Image Sep 16, 2026, 02_32_03 PM.png",
-    "thumb": "assets/thumbs/ChatGPT Image Sep 16, 2026, 02_32_03 PM.jpg",
+    "src": "assets/img/noirtech_flyer_maxim_test.png",
+    "thumb": "assets/thumbs/noirtech_flyer_maxim_test.jpg",
     "type": "image",
     "w": 1254,
     "h": 1254
@@ -343,6 +353,7 @@ const PROJECTS = [
   "story": "I animated and did small edits: the intro, the shop scene for the Biopass ad, the ambassador loop and the forgot-your-phone shot.",
   "tools": "Blender, video editing",
   "year": 2026,
+  "link": "https://paywithbriz.com",
   "items": [
    {
     "src": "assets/img/briz-intro.mp4",
@@ -382,6 +393,7 @@ const PROJECTS = [
   "story": "Made for my lecturer: a space where people design their 3D models and anyone can view them online. We planned to build it together but went our separate ways, so only the front page exists. The wooden planet is a Blender model of mine; the space, the light beam and the glare were put together in Figma.",
   "tools": "Figma, Blender",
   "year": 2025,
+  "link": "",
   "items": [
    {
     "src": "assets/img/MacBook Pro 14_ (1).jpg",
@@ -407,6 +419,7 @@ const PROJECTS = [
   "story": "Designed in Figma, with the hollow black face made in Blender. No reference, straight from my head. It got too complex for me at the time, so it stopped here.",
   "tools": "Figma, Blender",
   "year": 2026,
+  "link": "",
   "items": [
    {
     "src": "assets/img/MacBook Pro 14_ - 1 (3).png",
@@ -425,6 +438,7 @@ const PROJECTS = [
   "story": "A second go at a portfolio. The glass was shot for it too: I was chasing caustics in Cycles, but my laptop couldn't get there, so I kept the shot as it was.",
   "tools": "Figma, Blender",
   "year": 2026,
+  "link": "",
   "items": [
    {
     "src": "assets/img/MacBook Pro 14_ - 12 (1).png",
@@ -457,6 +471,7 @@ const PROJECTS = [
   "story": "That portfolio paired an image with each section. This was the graphic for the music section, and the note also became its play button. The background track was C418's Aria Math.",
   "tools": "Blender",
   "year": 2024,
+  "link": "",
   "items": [
    {
     "src": "assets/img/note1.jpg",
@@ -475,6 +490,7 @@ const PROJECTS = [
   "story": "One of my entries for Gary Simon's 30-day design challenge on LinkedIn.",
   "tools": "Figma",
   "year": 2026,
+  "link": "",
   "items": [
    {
     "src": "assets/img/MacBook Pro 14_ - 17.png",
@@ -500,6 +516,7 @@ const PROJECTS = [
   "story": "A 30-day design challenge (Gary Simon): we had to make something from the Figma project he shared.",
   "tools": "Figma",
   "year": 2026,
+  "link": "",
   "items": [
    {
     "src": "assets/img/MacBook Pro 14_ - 14.png",
@@ -525,6 +542,7 @@ const PROJECTS = [
   "story": "A 30-day design challenge entry: could I make one of the plainest sites online look good? Desktop and mobile.",
   "tools": "Figma",
   "year": 2026,
+  "link": "",
   "items": [
    {
     "src": "assets/img/MacBook Pro 14_ - 10 (2).png",
@@ -550,6 +568,7 @@ const PROJECTS = [
   "story": "One of my entries for Gary Simon's 30-day design challenge.",
   "tools": "Figma",
   "year": 2026,
+  "link": "",
   "items": [
    {
     "src": "assets/img/volt-run.mp4",
@@ -568,6 +587,7 @@ const PROJECTS = [
   "story": "One of my entries for Gary Simon's 30-day design challenge.",
   "tools": "Figma",
   "year": 2026,
+  "link": "",
   "items": [
    {
     "src": "assets/img/pentacon-dark.png",
@@ -593,6 +613,7 @@ const PROJECTS = [
   "story": "One of my entries for Gary Simon's 30-day design challenge.",
   "tools": "Figma",
   "year": 2026,
+  "link": "",
   "items": [
    {
     "src": "assets/img/roboledger.png",
@@ -611,6 +632,7 @@ const PROJECTS = [
   "story": "One of my entries for Gary Simon's 30-day design challenge.",
   "tools": "Figma",
   "year": 2026,
+  "link": "",
   "items": [
    {
     "src": "assets/img/robotics-site.mp4",
@@ -629,6 +651,7 @@ const PROJECTS = [
   "story": "One of my entries for Gary Simon's 30-day design challenge.",
   "tools": "Figma",
   "year": 2026,
+  "link": "",
   "items": [
    {
     "src": "assets/img/coolcode-channels.png",
@@ -661,6 +684,7 @@ const PROJECTS = [
   "story": "I saw a redesign of this app that got the UX right but lost the brand: nothing popped. This is my attempt to keep their look and vibe.",
   "tools": "Figma",
   "year": 2026,
+  "link": "",
   "items": [
    {
     "src": "assets/img/Home (1).jpg",
@@ -679,6 +703,7 @@ const PROJECTS = [
   "story": "The brochure itself was made in Blender, with some real photos placed on planes, which gave more interesting results than a flat layout. I only finished this one page.",
   "tools": "Blender",
   "year": 2025,
+  "link": "",
   "items": [
    {
     "src": "assets/img/PROPOSALD 2.jpg",
@@ -697,6 +722,7 @@ const PROJECTS = [
   "story": "The plan: we talk about something interesting, I animate just our faces to our voices, plus a few random moments. Animation is slow, so that keeps it doable. So far only the intro exists.",
   "tools": "Blender",
   "year": 2026,
+  "link": "",
   "items": [
    {
     "src": "assets/img/My Video-2.mp4",
@@ -715,6 +741,7 @@ const PROJECTS = [
   "story": "Someone asked for a teddy matched exactly to a reference, with fur, animated across scenes: on a plane, on the beach. Back then I couldn't do all of it yet, so this render and the beach shot are what came out of it.",
   "tools": "Blender",
   "year": 2024,
+  "link": "",
   "items": [
    {
     "src": "assets/img/VERSION 3.jpg",
@@ -740,6 +767,7 @@ const PROJECTS = [
   "story": "The white one was a PlayStation controller attempt from 3 or 4 years ago. The dark one is my current controller, close to the real thing, red and blue lights included.",
   "tools": "Blender",
   "year": 2026,
+  "link": "",
   "items": [
    {
     "src": "assets/img/dez.png",
@@ -800,6 +828,7 @@ const PROJECTS = [
   "story": "",
   "tools": "Blender",
   "year": 2024,
+  "link": "",
   "items": [
    {
     "src": "assets/img/squid3.jpg",
@@ -818,6 +847,7 @@ const PROJECTS = [
   "story": "",
   "tools": "Blender",
   "year": 2025,
+  "link": "",
   "items": [
    {
     "src": "assets/img/Composed.jpg",
@@ -836,6 +866,7 @@ const PROJECTS = [
   "story": "Modelled from nothing in Blender. Only the pattern on the side comes from BlenderKit.",
   "tools": "Blender, BlenderKit",
   "year": 2024,
+  "link": "",
   "items": [
    {
     "src": "assets/img/bottotol3.jpg",
@@ -861,6 +892,7 @@ const PROJECTS = [
   "story": "",
   "tools": "Blender",
   "year": 2024,
+  "link": "",
   "items": [
    {
     "src": "assets/img/cuos.jpg",
@@ -886,6 +918,7 @@ const PROJECTS = [
   "story": "Made following a tutorial.",
   "tools": "Blender",
   "year": 2024,
+  "link": "",
   "items": [
    {
     "src": "assets/img/PBallwall2.jpg",
@@ -904,6 +937,7 @@ const PROJECTS = [
   "story": "",
   "tools": "Blender",
   "year": 2025,
+  "link": "",
   "items": [
    {
     "src": "assets/img/PEBBLE2.jpg",
@@ -936,6 +970,7 @@ const PROJECTS = [
   "story": "The sky is a stock photo (Freepik, I think); the floor is a low-roughness reflective plane. A colour ramp on the background is what made it start looking like an anime.",
   "tools": "Blender",
   "year": 2025,
+  "link": "",
   "items": [
    {
     "src": "assets/img/Not anime.jpg",
@@ -975,6 +1010,7 @@ const PROJECTS = [
   "story": "I was learning volumetrics. It came out good, so I kept it.",
   "tools": "Blender",
   "year": 2024,
+  "link": "",
   "items": [
    {
     "src": "assets/img/blending3.jpg",
@@ -1000,6 +1036,7 @@ const PROJECTS = [
   "story": "Just design.",
   "tools": "Blender",
   "year": 2026,
+  "link": "",
   "items": [
    {
     "src": "assets/img/unlcuk.jpg",
@@ -1025,6 +1062,7 @@ const PROJECTS = [
   "story": "Just design.",
   "tools": "Blender",
   "year": 2025,
+  "link": "",
   "items": [
    {
     "src": "assets/img/pUTY.jpg",
@@ -1043,6 +1081,7 @@ const PROJECTS = [
   "story": "Made in Blender, straight from my head with no reference.",
   "tools": "Blender",
   "year": 2024,
+  "link": "",
   "items": [
    {
     "src": "assets/img/chimp.jpg",
@@ -1061,6 +1100,7 @@ const PROJECTS = [
   "story": "They liked it. Simple as that.",
   "tools": "Blender",
   "year": 2026,
+  "link": "",
   "items": [
    {
     "src": "assets/img/0001-0080.mp4",
@@ -1079,6 +1119,7 @@ const PROJECTS = [
   "story": "",
   "tools": "Blender",
   "year": 2025,
+  "link": "",
   "items": [
    {
     "src": "assets/img/icon-light.jpg",
@@ -1104,6 +1145,7 @@ const PROJECTS = [
   "story": "",
   "tools": "Blender",
   "year": 2026,
+  "link": "",
   "items": [
    {
     "src": "assets/img/iuihhyth.png",
@@ -1143,6 +1185,7 @@ const PROJECTS = [
   "story": "",
   "tools": "Blender",
   "year": 2025,
+  "link": "",
   "items": [
    {
     "src": "assets/img/0001-0200 (2).mp4",

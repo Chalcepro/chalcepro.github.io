@@ -26,7 +26,7 @@ PROJECTS = [
      "Meant as one of the characters Rewrite can swap into. Here he is in T-pose, a close-up of the hand, a clean pose, the flat illustration and the animated title card.",
      "Blender", ["Lord X.mp4", "lordx-tpose.jpg", "lordx-hand.jpg", "lordx-pose.jpg", "XX (1) (1).jpg"]),
     ("malware", "Malware", "Character", "A female character made in response to Rewrite.",
-     "A static model for now; the eyes don't move yet. The short clip is voiced by my girlfriend.",
+     "Rewrite is playful, so I wanted a partner for him, and a test of how far I could push myself. I put a little of my girlfriend into her design, and she voices the short clip. Both the character and her hammer are modelled; she is a static model for now and the eyes don't move yet.",
      "Blender", ["SaYY.mp4"]),
     ("rey", "Rey", "Character", "The red guy with glasses, made for a comic I haven't finished.",
      "Rey is an older character of mine; the E is the one with a flick on top, moving forward. A few months ago I started a comic with him. It isn't finished yet.",
@@ -35,8 +35,8 @@ PROJECTS = [
      "Building a whole 3D city wasn't going to happen, so I did what Vector and Shadow Fight did: silhouettes for the background. That leaves the detail for the character and still sells the idea.",
      "Blender", ["Refined.jpg"]),
     ("noir", "NOIR Technologies", "Branding", "Identity, social posts and motion for a software studio.",
-     "Motion graphics, video editing and Blender work together.",
-     "Blender, Figma, video editing", ["v4.mp4", "noir-beautiful.png", "1000582694.png", "Frame 656.png", "Frame 658.png", "Frame 660.png", "Frame 648.png", "better.mp4", "1000582695.png", "ChatGPT Image Sep 16, 2026, 02_32_03 PM.png"]),
+     "Motion graphics, video editing and Blender work together. The flyer test follows an idea from Luca Maxim on TikTok: open with something personal, a feeling or a thought, and only bring the product in at the end. Mine keeps just the personal part.",
+     "Blender, Figma, video editing", ["v4.mp4", "noir-beautiful.png", "1000582694.png", "Frame 656.png", "Frame 658.png", "Frame 660.png", "Frame 648.png", "better.mp4", "1000582695.png", "noirtech_flyer_maxim_test.png"]),
     ("briz", "Briz", "Motion", "Pay like a breeze: the intro, the shop scene and the small pieces around them.",
      "I animated and did small edits: the intro, the shop scene for the Biopass ad, the ambassador loop and the forgot-your-phone shot.",
      "Blender, video editing", ["briz-intro.mp4", "biopass-ad.mp4", "briz-ambassador.mp4", "briz-forgot-phone.mp4"]),
@@ -108,7 +108,9 @@ PROJECTS = [
     ("flat", "Flat Studies", "Illustration", "Small flat pieces.", "", "Blender", ["iuihhyth.png", "jhjh.jpg", "qwfqwd.png", "blue.jpg"]),
     ("loops", "Short Loops", "Animation", "Little animations that loop.", "", "Blender", ["0001-0200 (2).mp4", "Pose1.mp4", "Skull face.mp4", "intro.mp4"]),
 ]
-FEATURED = ["emerald", "ryder", "metal"]
+FEATURED = ["ryder", "rey", "emerald"]
+# live sites, shown as a link in the project panel
+LINKS = {"noir": "https://noirtech.digital", "briz": "https://paywithbriz.com"}
 
 
 def size(f):
@@ -128,11 +130,22 @@ for pid, title, cat, line, story, tools, files in PROJECTS:
         items.append({"src": "assets/img/" + f, "thumb": "assets/thumbs/" + os.path.splitext(f)[0] + ".jpg",
                       "type": "video" if f.lower().endswith(".mp4") else "image", "w": w, "h": h})
     year = max(time.localtime(os.path.getmtime(os.path.join(IMG, f))).tm_year for f in files)
-    out.append({"id": pid, "title": title, "cat": cat, "line": line, "story": story, "tools": tools, "year": year, "items": items})
+    out.append({"id": pid, "title": title, "cat": cat, "line": line, "story": story, "tools": tools, "year": year, "link": LINKS.get(pid, ""), "items": items})
 left = sorted(set(os.listdir(IMG)) - used)
 print("not shown:", left)
 with open(os.path.join(ROOT, "data.js"), "w", encoding="utf-8") as fh:
     fh.write("// Made by tools/build_data.py -- edit the list there, not here.\n")
     fh.write("const FEATURED = " + json.dumps(FEATURED) + ";\n")
     fh.write("const PROJECTS = " + json.dumps(out, indent=1, ensure_ascii=False) + ";\n")
+
+import html, re
+# static copy of the list for search engines, link previews and visitors without JS
+static = "\n".join(f'    <li><b>{html.escape(p["title"])}</b> ({html.escape(p["cat"])}): {html.escape(p["line"])}</li>' for p in out)
+page = os.path.join(ROOT, "index.html")
+with open(page, encoding="utf-8") as fh:
+    doc = fh.read()
+doc = re.sub(r"(<!-- projects:start -->).*?(<!-- projects:end -->)",
+             lambda m: m.group(1) + "\n<noscript><ul>\n" + static + "\n</ul></noscript>\n    " + m.group(2), doc, flags=re.S)
+with open(page, "w", encoding="utf-8", newline="\n") as fh:
+    fh.write(doc)
 print(len(out), "projects,", len(used), "files")

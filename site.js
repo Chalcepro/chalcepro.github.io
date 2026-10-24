@@ -174,6 +174,7 @@
       <h3>${esc(p.title)}</h3>
       <p class="panel__line">${esc(p.line)}</p>
       ${p.story ? `<p class="panel__story">${esc(p.story)}</p>` : ''}
+      ${p.link ? `<p><a class="btn" href="${esc(p.link)}" target="_blank" rel="noopener">Visit ${esc(p.link.replace(/^https?:\/\//, ''))} ↗</a></p>` : ''}
       <dl class="panel__facts">
         <dt>Type</dt><dd>${esc(p.cat)}</dd>
         <dt>Tools</dt><dd>${esc(p.tools)}</dd>
